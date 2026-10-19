@@ -27,20 +27,18 @@ Phone authenticator apps live on a device that also gets lost, hacked, or runs o
 
 ## Bill of Materials (BOM)
 
-### Electronics
-
-| # | Qty | Component | Ref | Footprint / size | Purpose |
-|---|---|---|---|---|---|
-| 1 | 1 | Seeed XIAO ESP32-C3 | U1 | XIAO-ESP32-C3-SMD | Main controller, USB-C charging |
-| 2 | 1 | R503 capacitive fingerprint sensor (3.3 V, UART, 6-pin) | J3 | 1×6 pin header, 2.54 mm | Unlocks the device |
-| 3 | 1 | 0.96" SSD1306 OLED, 128×64, 4-pin I2C | J2 | 1×4 pin header, 2.54 mm | Shows the codes |
-| 4 | 1 | I2C RTC module (e.g. DS3231) | J1 | 1×4 pin header, 2.54 mm | Keeps time for TOTP |
-| 5 | 3 | Tactile push button, 6×6×5 mm, THT | SW1–SW3 | SW_PUSH_6mm | Wake and select account |
-| 6 | 1 | 10 kΩ resistor, 0805 | R1 | 0805 (hand-solder pads) | Pull-up on the sensor wake line |
-| 7 | 1 | JST-PH 2-pin vertical connector | J4 | JST_PH_B2B-PH-K | Battery connector |
-| 8 | 1 | 402030 LiPo battery, 3.7 V, with JST-PH plug | – | 4 × 20 × 30 mm | Power |
-| 9 | 3 | 1×4 / 1×6 female-to-female jumper cables | – | 2.54 mm | Module connections |
-| 10 | 1 | Custom PCB, 2-layer | – | 52.4 × 37.4 mm | Main board |
+  | Part | What it's for | Qty | Vendor | Link |
+  |---|---|---|---|---|
+  | Seeed XIAO ESP32-C3 | Main controller + USB-C LiPo charging | 1 | Seeed Studio | https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html |
+  | AS608 optical fingerprint sensor | Unlocks the device | 1 | Colgroad | https://colgroad.com/product/as608-fingerprint-reader-optical-sensor-module/ |
+  | 0.96" 128×64 I2C OLED (SSD1306) | Shows the 6-digit codes | 1 | Colgroad | https://colgroad.com/product/0-96-inch-128x64-i2c-oled-display-module/ |
+  | DS3231 RTC module | Keeps accurate time for TOTP | 1 | Colgroad | https://colgroad.com/product/ds3231-rtc-real-time-clock-module/ |
+  | Tactile push button 6×6×5 mm | Wake and switch accounts | 3 | Colgroad | https://colgroad.com/product/tactile-push-button-switch/ |
+  | JST-PH 2.0 mm 2-pin male header | Battery connector on the PCB | 1 | Colgroad | https://colgroad.com/product/jst-male-connector-2-0mm-2-pin-straight/ |
+  | 3.7 V 800 mAh LiPo (803035) | Power | 1 | Colgroad | https://colgroad.com/product/3-7v-800mah-803035-2-96wh-lipo-rechargeable-battery/ |
+  | 10 kΩ resistor, 1/4 W | Pull-up on the sensor wake line | 1 | Colgroad | https://colgroad.com/product/metal-film-resistors-5-1-4-watt-small-values/ |
+  | Jumper wires, 20 cm (pack) | Connect OLED, RTC and sensor to the PCB | 1 | Colgroad | https://colgroad.com/product/20cm-male-to-male-pin-to-pin-jumper-wires-set-20pcs-40pcs/ |
+  | Custom PCB, 2-layer, 52.4 × 37.4 mm | Main board | 1 | – | – |
 
 ### Printed parts
 
